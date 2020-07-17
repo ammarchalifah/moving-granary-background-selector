@@ -6,7 +6,7 @@ Simple implementation to generate grayscale background image from a video stream
 ## Introduction
 The idea behind this background selector implementation program is interval-based image sampling from a video, storing those sampled image inside a variable (with dimension w x h x d, d denotes the depth or number of images to be stored), and calculating the element-wise mode of intensity without incorporating the extreme 20% highest and 20% lowest value.
 
-The variable used for storing the sampled images is called **granary**. I don't really know whether there is an actual term for this (and I shouldn't name it granary), but I think granary sounds cool and represents the concept perfectly.
+The variable used for storing the sampled images is called **granary**. I don't really know whether there is an actual term for the variable (and I shouldn't name it granary) or not, but I think granary sounds cool and represents the concept perfectly.
 
 Because of the simple implementation, there are some important notes to be considered before using this program:
 - It can't automatically detects the length of your video. So please input the total number of frames manually.
@@ -35,7 +35,7 @@ python backgroundselector.py -f frame_per_pop -t total_frame_granary -i input_pa
   - *total_frame_granary*: the depth of your granary. Use bigger number if you have sufficient computing power and relatively constant background image.
   - *input_path*: path for the video file.
   - *last_frame*: the total number of frames you want to consider.
-- Example for running this program
+- Run example
 ```
 python backgroundselector.py -f 24 -t 10 -i sample.mp4 -l 620
 ```
